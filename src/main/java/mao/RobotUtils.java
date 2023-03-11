@@ -56,6 +56,23 @@ public class RobotUtils
         robot.mouseRelease(16);
     }
 
+    /**
+     * 鼠标中键键点击
+     *
+     * @param x 要点击的位置的x轴
+     * @param y 要点击的位置的Y轴
+     */
+    public static void centerClick(int x, int y)
+    {
+        //移动到当前位置
+        robot.mouseMove(x, y);
+        //右键按压
+        robot.mousePress(8);
+        //10毫秒
+        sleep(10L);
+        //右键释放
+        robot.mouseRelease(8);
+    }
 
     /**
      * 鼠标右键键点击
@@ -68,11 +85,11 @@ public class RobotUtils
         //移动到当前位置
         robot.mouseMove(x, y);
         //右键按压
-        robot.mousePress(8);
+        robot.mousePress(4);
         //10毫秒
         sleep(10L);
         //右键释放
-        robot.mouseRelease(8);
+        robot.mouseRelease(4);
     }
 
 
